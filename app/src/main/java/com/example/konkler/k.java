@@ -9,16 +9,56 @@ public class k {
     private String oB;
     private String oC;
     private String Poprawne;
-    private String uO;
-    private String czyPoprawne;
+    //private String uO;
+    //private String czyPoprawne;
 
-    public k(String tP, String oA, String oB, String oC, String Poprawne, String uO, String czyPoprawne) {
+    public k(String tP, String oA, String oB, String oC, String Poprawne ) {
         this.tP = tP;
         this.oA = oA;
         this.oB = oB;
         this.oC = oC;
         this.Poprawne = Poprawne;
-        this.uO = uO;
-        this.czyPoprawne = czyPoprawne;
+        //this.uO = uO;
+        //this.czyPoprawne = czyPoprawne;  String uO, String czyPoprawne
+    }
+
+    public String gettP() {
+        return tP;
+    }
+
+    public void settP(String tP) {
+        this.tP = tP;
+    }
+
+    public String getoA() {
+        return oA;
+    }
+
+    public void setoA(String oA) {
+        this.oA = oA;
+    }
+
+    public String getoB() {
+        return oB;
+    }
+
+    public void setoB(String oB) {
+        this.oB = oB;
+    }
+
+    public String getoC() {
+        return oC;
+    }
+
+    public void setoC(String oC) {
+        this.oC = oC;
+    }
+
+    public String getPoprawne() {
+        return Poprawne;
+    }
+
+    public void setPoprawne(String poprawne) {
+        Poprawne = poprawne;
     }
 }
