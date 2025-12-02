@@ -1,6 +1,10 @@
 package com.example.konkler;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -20,6 +24,12 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class MainActivity extends AppCompatActivity {
 
     List<k> pytania;
+    private TextView tresc1;
+    private TextView tresc2;
+    private TextView tresc3;
+    private RadioButton odp1;
+    private RadioButton odp2;
+    private RadioButton odp3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +50,23 @@ public class MainActivity extends AppCompatActivity {
                             Toast.makeText(MainActivity.this, ""+response.code(), Toast.LENGTH_SHORT).show();
                         }
                         pytania = response.body();
-                        Toast.makeText(MainActivity.this, pytania.get(0).gettP(), Toast.LENGTH_SHORT).show();
+                        tresc1 = findViewById(R.id.textView);
+                        tresc1.setText(pytania.get(0).gettP());
+                        odp1 = findViewById(R.id.radioButton);
+                        odp2 = findViewById(R.id.radioButton2);
+                        odp3 = findViewById(R.id.radioButton3);
+                        odp1.setText(pytania.get(0).getoA());
+                        odp2.setText(pytania.get(0).getoB());
+                        odp3.setText(pytania.get(0).getoC());
+
+                        tresc2 = findViewById(R.id.textView6);
+                        tresc2.setText(pytania.get(1).gettP());
+
+                        tresc3 = findViewById(R.id.textView7);
+                        tresc3.setText(pytania.get(2).gettP());
+
+
+                        //Toast.makeText(MainActivity.this, pytania.get(0).gettP(), Toast.LENGTH_SHORT).show();
                     }
 
                     @Override

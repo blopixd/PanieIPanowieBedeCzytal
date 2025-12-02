@@ -8,11 +8,11 @@ public class k {
     private String oA;
     private String oB;
     private String oC;
-    private String Poprawne;
+    private int Poprawne;
     //private String uO;
     //private String czyPoprawne;
 
-    public k(String tP, String oA, String oB, String oC, String Poprawne ) {
+    public k(String tP, String oA, String oB, String oC, int Poprawne ) {
         this.tP = tP;
         this.oA = oA;
         this.oB = oB;
@@ -54,11 +54,11 @@ public class k {
         this.oC = oC;
     }
 
-    public String getPoprawne() {
+    public int getPoprawne() {
         return Poprawne;
     }
 
-    public void setPoprawne(String poprawne) {
+    public void setPoprawne(int poprawne) {
         Poprawne = poprawne;
     }
 }
